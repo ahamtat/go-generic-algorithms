@@ -11,33 +11,24 @@ func main() {
 	nameStack.Push("Zachary")
 	nameStack.Push("Adolf")
 
-	topOfStack := nameStack.Top()
-	if topOfStack != stack.GetZero[string]() {
-		fmt.Printf("\nTop of stack is %s", topOfStack)
+	if !nameStack.IsEmpty() {
+		fmt.Printf("\nTop of stack is %s", nameStack.Top())
 	}
 
-	poppedFromStack := nameStack.Pop()
-	if poppedFromStack != stack.GetZero[string]() {
-		fmt.Printf("\nValue popped from stack is %s",
-			poppedFromStack)
+	if !nameStack.IsEmpty() {
+		fmt.Printf("\nValue popped from stack is %s", nameStack.Pop())
 	}
 
-	poppedFromStack = nameStack.Pop()
-	if poppedFromStack != stack.GetZero[string]() {
-		fmt.Printf("\nValue popped from stack is %s",
-			poppedFromStack)
+	if !nameStack.IsEmpty() {
+		fmt.Printf("\nValue popped from stack is %s", nameStack.Pop())
 	}
 
-	poppedFromStack = nameStack.Pop()
-	if poppedFromStack != stack.GetZero[string]() {
-		fmt.Printf("\nValue popped from stack is %s",
-			poppedFromStack)
+	if !nameStack.IsEmpty() {
+		fmt.Printf("\nValue popped from stack is %s", nameStack.Pop())
 	}
 
-	poppedFromStack = nameStack.Pop()
-	if poppedFromStack != stack.GetZero[string]() {
-		fmt.Printf("\nValue popped from stack is %s",
-			poppedFromStack)
+	if !nameStack.IsEmpty() {
+		fmt.Printf("\nValue popped from stack is %s", nameStack.Pop())
 	}
 
 	// Create a stack of integers
@@ -48,22 +39,19 @@ func main() {
 
 	// value for int
 	top := intStack.Top()
-	if top != stack.GetZero[int]() {
+	if !intStack.IsEmpty() {
 		fmt.Printf("\nValue on top of intStack is %d", top)
 	}
 
-	popFromStack := intStack.Pop()
-	if popFromStack != stack.GetZero[int]() {
-		fmt.Printf("\nValue popped from intStack is %d", popFromStack)
+	if !intStack.IsEmpty() {
+		fmt.Printf("\nValue popped from intStack is %d", intStack.Pop())
 	}
 
-	popFromStack = intStack.Pop()
-	if popFromStack != stack.GetZero[int]() {
-		fmt.Printf("\nValue popped from intStack is %d", popFromStack)
+	if !intStack.IsEmpty() {
+		fmt.Printf("\nValue popped from intStack is %d", intStack.Pop())
 	}
 
-	popFromStack = intStack.Pop()
-	if popFromStack != stack.GetZero[int]() {
-		fmt.Printf("\nValue popped from intStack is %d", popFromStack)
+	if !intStack.IsEmpty() {
+		fmt.Printf("\nValue popped from intStack is %d", intStack.Pop())
 	}
 }
