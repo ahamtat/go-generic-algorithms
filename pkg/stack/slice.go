@@ -10,11 +10,18 @@ func (stack *Sliced[T]) Push(item T) {
 	stack.items = append(stack.items, item)
 }
 
-func (stack *Sliced[T]) Pop() T {
+func (stack *Sliced[T]) Pop() (T, error) {
+	var result T
+
+	if stack.IsEmpty() {
+		return result, ErrEmptyStack
+	}
+
 	length := len(stack.items)
-	returnValue := stack.items[length-1]
+	result = stack.items[length-1]
 	stack.items = stack.items[:(length - 1)]
-	return returnValue
+
+	return result, nil
 }
 
 func (stack Sliced[T]) Top() T {
